@@ -21,6 +21,7 @@ public class EventRange extends Observable implements Observer{
 	//private int Status;
 	private final double ANGLE_DEPART=-2.35619449;
 	private int degreesToHide = 35;
+	private long lastUpdate = System.currentTimeMillis();
 	
 	
 	public EventRange(int degreesToHide){
@@ -128,10 +129,16 @@ public class EventRange extends Observable implements Observer{
 		return positionRad;
 	}
 	
+	public long getLastUpdate()
+	{
+		return lastUpdate;
+	}
+	
 	@Override
 	public void update(Observable arg0, Object arg1) {
 	
 		data=io.getReponse();
+		lastUpdate=io.getLastUpdate();
 		checkConfirmation();
 	}
 

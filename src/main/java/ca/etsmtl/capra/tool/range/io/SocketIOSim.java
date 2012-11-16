@@ -21,5 +21,10 @@ public class SocketIOSim extends InterfaceIO{
 	public void connect(String adresse) {
 		
 	}
+	
+	public synchronized long getLastUpdate()
+	{
+		return System.currentTimeMillis();
+	}
 
 }
