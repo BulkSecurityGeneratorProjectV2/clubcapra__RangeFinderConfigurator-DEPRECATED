@@ -34,8 +34,8 @@ public class EventRange extends Observable implements Observer{
 		this.degreesToHide = degreesToHide;
 	}
 	
-	public void connectRF(String adresse){
-		io.connect(adresse);
+	public boolean connectRF(String adresse){
+		return io.connect(adresse);
 	}
 	
 	private void addTelegrams(String[] telegram){
@@ -106,7 +106,7 @@ public class EventRange extends Observable implements Observer{
 	
 	public void setPositionXY(int[] positionRad){
 		Vector<Point2D> points = new Vector<Point2D>();
-		for(int laser= (0 + degreesToHide);laser < (541 - degreesToHide);laser++){
+		for(int laser= (0 + degreesToHide);laser <= (539 - degreesToHide);laser++){
 			Point2D point=new Point();
 			int invertedLaser = 541 - 2 - laser;
 			point.setLocation(positionRad[invertedLaser]*Math.cos(invertedLaser*0.00872664626+ANGLE_DEPART),

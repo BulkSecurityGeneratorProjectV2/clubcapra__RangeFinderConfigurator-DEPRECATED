@@ -23,8 +23,7 @@ public class SocketIO extends InterfaceIO{
 		
 		
 	}
-	/*adresse 192.168.31.100 */
-	public void connect(String adresse){
+	public boolean connect(String adresse){
 		try {	
 			try{
 				System.out.println("Trying to connect to rangefinder...");
@@ -40,11 +39,14 @@ public class SocketIO extends InterfaceIO{
 	
 				// use Executors instead of threads
 				Executors.newSingleThreadExecutor().execute(inputThread);
+				return true;
 			}
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		return false;
 		
 	}
 	

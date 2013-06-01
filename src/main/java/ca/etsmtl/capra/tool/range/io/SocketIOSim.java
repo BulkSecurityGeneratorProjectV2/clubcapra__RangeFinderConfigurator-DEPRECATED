@@ -18,8 +18,8 @@ public class SocketIOSim extends InterfaceIO{
 	}
 
 	@Override
-	public void connect(String adresse) {
-		
+	public boolean connect(String adresse) {
+		return true;
 	}
 	
 	public synchronized long getLastUpdate()
