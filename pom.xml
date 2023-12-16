@@ -14,7 +14,7 @@
       <repository>
           <id>maven2-repository.dev.java.net</id>
           <name>Java.net Repository for Maven</name>
-          <url>http://download.java.net/maven/2/</url>
+          <url>https://download.java.net/maven/2/</url>
       </repository>
     </repositories>
   
@@ -60,7 +60,7 @@
     <snapshotRepository>
         <id>CAPRA-Artifactory</id>
         <name>CAPRA-Artifactory-snapshots</name>
-        <url>http://clubcapra.com/artifactory/libs-snapshot-local</url>
+        <url>https://clubcapra.com/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
   </distributionManagement>
   
